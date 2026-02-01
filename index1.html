@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YOUTUBE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheets/main1.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/image/youtubelogo.png">
+</head>
+<body>
+
+    <div class="header">
+        <div class="col-1 d-flex align-items-center">
+            <i class="ri-menu-line me-3"></i> 
+            <div class="logo d-flex align-items-center">
+                <div class="logo-img">
+                    <img src="assets/image/logo.png" alt="logo" class="img-fluid" style="height: 37px; width: 150px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2 d-flex align-items-center flex-grow-1 justify-content-center mx-3 d-none d-lg-flex">
+            <form class="d-flex w-75 position-relative">
+           <input id="searchInput" type="text" class="form-control bg-transparent text-white border border-secondary" placeholder="Search"/>
+           <button id="searchBtn" class="btn search bg-secondary border-0" type="submit">
+           <i class="ri-search-line text-white"></i>
+           </button>
+  
+  <!-- 🔻 Search History Popup -->
+  <div id="searchHistory" class="dropdown-menu show w-100 mt-2" style="position: absolute; top: 100%; left: 0; z-index: 10;"></div>
+</form>
+
+             <div class="search-history d-flex flex-wrap mt-2" id="searchHistory"></div>
+            <button class="btn mic bg-secondary rounded-circle ms-2 d-none d-xl-block" type="button"><i class="ri-mic-line text-white"></i></button>
+           
+        </div>
+
+
+        <div class="col-3 d-flex align-items-center justify-content-end">
+            <i class="ri-video-add-line mx-2 d-none d-md-block"></i>
+            <i class="ri-notification-fill mx-2 d-none d-md-block"></i>
+            <i class="ri-user-fill mx-2"></i>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="sidebar d-none d-xl-block"> <div class="list1">
+                <a class="sidebar-item"><i class="ri-home-5-line"></i>Home</a>
+                <a class="sidebar-item"><i class="ri-compass-fill"></i>Explore</a>
+                <a class="sidebar-item"><i class="ri-wireless-charging-line"></i>Shorts</a>
+                <a class="sidebar-item"><i class="ri-rss-line"></i>Subscription</a>
+                <hr/>
+                <a class="sidebar-item"><i class="ri-links-line"></i>Library</a>
+                <a class="sidebar-item"><i class="ri-history-fill"></i>History</a>
+                <a class="sidebar-item"><i class="ri-video-fill"></i>Your videos</a>
+                <a class="sidebar-item"><i class="ri-timer-line"></i>Watch later</a>
+                <a class="sidebar-item"><i class="ri-film-line"></i>All videos</a> 
+                <a class="sidebar-item"><i class="ri-arrow-down-line"></i>Downloads</a> 
+                <h5 class="more">More from youtube</h5>
+                <a class="sidebar-item"><i class="ri-keyboard-box-line"></i>Gaming</a>
+                <a class="sidebar-item"><i class="ri-live-line"></i>Live</a>
+                <a class="sidebar-item"><i class="ri-award-line"></i>Sports</a>
+                <hr/>
+                <a class="sidebar-item"><i class="ri-settings-5-line"></i>Settings</a>
+                <a class="sidebar-item"><i class="ri-flag-line"></i>Report history</a>
+                <a class="sidebar-item"><i class="ri-question-line"></i>Help</a>
+                <a class="sidebar-item"><i class="ri-feedback-line"></i>Send feedback</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="tag-line d-flex flex-nowrap overflow-auto py-2 mb-3">
+                <div class="tag text-nowrap mx-1"><p class="my-0">All</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Data Science</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Flutter</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Java</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">React</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">UI/UX</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">DSA</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">DLD</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Web Technologies</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Software Engineering</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Python</p></div>
+            </div>
+            <div class="video-wrapper row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pb-3"> 
+                
+               
+               
+               
+               
+                
+               
+               
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/javascripts/java.js"></script>
+<script>
+  document.querySelector(".search").addEventListener("click", function () {
+    document.querySelector(".col-2").classList.toggle("show-search");
+  });
+</script>
+</script>
+</body>
+</html>

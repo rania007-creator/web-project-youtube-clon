@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YOUTUBE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheets/main1.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/image/youtubelogo.png">
+</head>
+<body>
+
+    <div class="header">
+        <div class="col-1 d-flex align-items-center">
+            <i class="ri-menu-line me-3"></i> 
+            <div class="logo d-flex align-items-center">
+                <div class="logo-img">
+                    <img src="assets/image/logo.png" alt="logo" class="img-fluid" style="height: 37px; width: 150px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2 d-flex align-items-center flex-grow-1 justify-content-center mx-3 d-none d-lg-flex">
+            <form class="d-flex w-75">
+                <input type="text" id="searchInput" class="form-control bg-transparent text-white border border-secondary" placeholder="Search"/>
+                <button class="btn search bg-secondary border-0" type="submit"><i class="ri-search-line text-white"></i></button>
+            </form>
+            <button class="btn mic bg-secondary rounded-circle ms-2 d-none d-xl-block" type="button"><i class="ri-mic-line text-white"></i></button>
+        </div>
+
+        <div class="col-3 d-flex align-items-center justify-content-end">
+            <i class="ri-video-add-line mx-2 d-none d-md-block"></i>
+            <i class="ri-notification-fill mx-2 d-none d-md-block"></i>
+            <i class="ri-user-fill mx-2"></i>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div id="sidebar" class="sidebar bg-dark d-none d-md-block">
+  <div class="list1">
+    <a class="sidebar-item" data-topic="home"><i class="ri-home-5-line"></i><span class="label">Home</span></a>
+    <a class="sidebar-item" data-topic="explore"><i class="ri-compass-fill"></i><span class="label">Explore</span></a>
+    <a class="sidebar-item" data-topic="shorts"><i class="ri-wireless-charging-line"></i><span class="label">Shorts</span></a>
+    <a class="sidebar-item" data-topic="subscription"><i class="ri-rss-line"></i><span class="label">Subscription</span></a>
+    <hr/>
+    <a class="sidebar-item" data-topic="library"><i class="ri-links-line"></i><span class="label">Library</span></a>
+    <a class="sidebar-item" data-topic="history"><i class="ri-history-fill"></i><span class="label">History</span></a>
+    <a class="sidebar-item" data-topic="your videos"><i class="ri-video-fill"></i><span class="label">Your videos</span></a>
+    <a class="sidebar-item" data-topic="watch later"><i class="ri-timer-line"></i><span class="label">Watch later</span></a>
+    <a class="sidebar-item" data-topic="all videos"><i class="ri-film-line"></i><span class="label">All videos</span></a>
+    <a class="sidebar-item" data-topic="downloads"><i class="ri-arrow-down-line"></i><span class="label">Downloads</span></a>
+    <h5 class="more">More from youtube</h5>
+    <a class="sidebar-item" data-topic="gaming"><i class="ri-keyboard-box-line"></i><span class="label">Gaming</span></a>
+    <a class="sidebar-item" data-topic="live"><i class="ri-live-line"></i><span class="label">Live</span></a>
+    <a class="sidebar-item" data-topic="sports"><i class="ri-award-line"></i><span class="label">Sports</span></a>
+    <hr/>
+    <a class="sidebar-item" data-topic="settings"><i class="ri-settings-5-line"></i><span class="label">Settings</span></a>
+    <a class="sidebar-item" data-topic="report history"><i class="ri-flag-line"></i><span class="label">Report history</span></a>
+    <a class="sidebar-item" data-topic="help"><i class="ri-question-line"></i><span class="label">Help</span></a>
+    <a class="sidebar-item" data-topic="feedback"><i class="ri-feedback-line"></i><span class="label">Send feedback</span></a>
+  </div>
+</div>
+
+        
+        <div class="content">
+            <div class="tag-line d-flex flex-nowrap overflow-auto py-2 mb-3">
+                <div class="tag text-nowrap mx-1"><p class="my-0">All</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Data Science</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Flutter</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Java</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">React</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">UI/UX</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">DSA</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">DLD</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Web Technologies</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Software Engineering</p></div>
+                <div class="tag text-nowrap mx-1"><p class="my-0">Python</p></div>
+            </div>
+            <div class="video-wrapper row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pb-3"> 
+                
+               
+               
+               
+               
+                
+               
+               
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/javascripts/java3.js"></script>
+   <script>
+    const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('d-none');
+  });
+   </script>
+</body>
+</html>

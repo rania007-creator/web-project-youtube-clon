@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=on');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    padding-top: 50px; /* Exactly header height */
+    overflow-x: hidden;
+}
+
+i {
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* --- HEADER STYLES --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px;
+    padding-right: 40px;
+    z-index: 1000;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.logo-img {
+    margin-left: 2px;
+    position: relative;
+    height: 37px;
+    width: 150px;
+}
+
+.logo-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+input{
+    margin-left: 150px;
+}
+
+
+.col-2 .search {
+    min-width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a9a9a9;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.col-2 .mic {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a9a9a9;
+    border: none;
+    outline: none;
+    padding: 3px;
+}
+
+
+
+/* --- WRAPPER AND CONTENT AREA --- */
+.wrapper {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+   scrollbar-width: thin;
+    /* Adjusted width from 240px to 180px */
+    width: 200px; 
+    background-color: #000;
+    overflow-y: auto;
+    color: #fff;
+    flex-shrink: 0;
+    height: 100%;
+    /* d-none d-xl-block in HTML handles responsiveness */
+}
+
+.list1 {
+ 
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    /* Adjusted padding to fit new sidebar width */
+    padding: 0 15px; 
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-item:hover {
+    background-color: #333;
+}
+
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.533);
+    margin: 12px 0px;
+}
+
+h5 {
+    font-size: 1em;
+    color: #aaa;
+    text-transform: uppercase;
+    /* Adjusted margin to fit new sidebar width */
+    margin-left: 15px; 
+}
+
+.sidebar-item i {
+    /* Adjusted margin to fit new sidebar width */
+    margin-right: 15px; 
+}
+
+
+.content {
+    flex: 1;
+    background-color: #1a1a1a;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px 25px;
+    padding-top: 0;
+    scrollbar-width: thin;
+    scrollbar-color: white;
+}
+
+
+/* --- TAG LINE --- */
+.tag-line {
+    width: 100%;
+    white-space: nowrap;
+    background-color: #1a1a1a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    overflow: auto;
+}
+.tag-line::-webkit-scrollbar {
+    display: none;
+}
+
+.tag {
+    padding: 3px 16px;
+    background: #ccc;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.85em;
+    flex-shrink: 0;
+    color: #000;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #fff;
+    color:#000;
+}
+
+
+/* --- VIDEO GRID --- */
+.video-wrapper {
+    padding: 0 !important;
+}
+
+.video {
+    position: relative;
+    border: 1px solid #504c4c;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.video-content {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+    overflow: hidden;
+    background-color: #333;
+    flex-shrink: 0;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-details {
+    display: flex;
+    color: #fff;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.channel-logo {
+    min-width: 40px;
+    height: 40px;
+    /* This is where the magic happens for the circle */
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Crucial to clip the image to the circle */
+    margin-right: 10px;
+    background-color: #555;
+    flex-shrink: 0;
+}
+
+.channel-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circular container */
+    /* Removed border-radius from here as it's handled by .channel-logo */
+    padding: 10px;
+}
+
+.detail {
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    color: #fff;
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.channel-name {
+    font-size: .8em;
+    color: #aaa;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 991.98px) { /* Bootstrap 'lg' breakpoint */
+    .header .col-2 {
+        display: none !important;
+    }
+
+    .header .col-3 .ri-video-add-line,
+    .header .col-3 .ri-notification-fill {
+        display: none !important;
+    }
+
+    .header .col-1 .ri-menu-line {
+        margin-right: 15px !important;
+    }
+
+    .header .logo-img {
+        margin-left: 0;
+        width: 120px;
+        height: 30px;
+    }
+    
+    .content {
+        padding: 15px;
+        padding-top: 0;
+    }
+
+    .tag-line {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/* Tablet view adjustments (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* ✅ Show full header: logo, search bar, mic, icons */
+  .header .col-1,
+  .header .col-2,
+  .header .col-3 {
+    display: flex !important;
+  }
+
+  /* ✅ Sidebar shrinks and shows icons only */
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0; /* Hide text */
+    padding: 10px 0;
+  }
+
+  .sidebar-item i {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .sidebar-item:hover {
+    background-color: #333;
+  }
+
+  .sidebar h5,
+  .sidebar-item::after,
+  .sidebar-item span,
+  .sidebar-item p {
+    display: none !important;
+  }
+
+  /* ✅ Tag line remains fully visible */
+  .tag-line {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+}
+@media (max-width: 575.98px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 5px 15px;
+  }
+
+  .header .col-1,
+  .header .col-3 {
+    flex: 0 0 auto;
+    z-index: 2;
+  }
+
+  .header .col-2 {
+    flex-grow: 1;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Hide input by default */
+  .mobile-search-input {
+    display: none;
+    position: absolute;
+    top: 100%; /* Push below header */
+    left: 0;
+    width: 100vw;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 999;
+    font-size: 14px;
+  }
+
+  /* Show input when toggled */
+  .header .col-2.show-search .mobile-search-input {
+    display: block;
+  }
+
+  .search {
+    background-color: #a9a9a9;
+    border: none;
+    padding: 6px 10px;
+    color: #fff;
+    z-index: 1001;
+  }
+
+  .header .col-2 input::placeholder {
+    color: #000;
+  }
+}
+@media (max-width: 768px) {
+  #sidebar.icon-only .label {
+    display: none !important;
+  }
+
+  #sidebar.icon-only .sidebar-item {
+    justify-content: center;
+  }
+
+  #sidebar.icon-only {
+    width: 60px;
+  }
+
+  #sidebar.icon-only .sidebar-item i {
+    margin-right: 0;
+  }
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            background-color: #f0f0f0;
+            
+        }
+        #video-container{
+            max-width:800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container"></div>
+
+
+
+    
+        
+ <script>
+  
+
+const videoId = sessionStorage.getItem("videoId");
+    if (videoId) {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      document.getElementById("video-container").appendChild(iframe);
+    } else {
+      document.getElementById("video-container").innerHTML = "<p>Video not found.</p>";
+    }
+</script>
+
+
+
+
+    
+</body>
+</html>
